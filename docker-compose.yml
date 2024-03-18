@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  mi_contenedor_postgres:
+    image: postgres:alpine3.19
+    container_name: db-cantera
+    environment:
+      POSTGRES_USER: pablos08
+      POSTGRES_PASSWORD: kolopollin2010
+      POSTGRES_DB: canteradb
+    volumes:
+      - C:\Source\canteramildnerapp\db-datos\db-datos:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: always
